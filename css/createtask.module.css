@@ -1,0 +1,125 @@
+.form_task {
+  padding: 2rem;
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+  max-width: 400px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.form_group {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.form_title_row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.form_task input[type="text"],
+.form_task input[type="date"],
+.form_task input[type="text"] {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.button_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap; /* Optional: wraps on smaller screens */
+}
+
+.form_task input[type="submit"],
+.remove_button,
+.finish_button {
+  margin: 1rem 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: #425aa3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.form_task input[type="submit"]:hover,
+.remove_button:hover,
+.finish_button:hover {
+  background-color: hsl(225, 64%, 63%);
+}
+
+.task_list_container a {
+  text-decoration: none;
+  color: #242629;
+}
+
+
+.task_list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task_list_item {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background-color: #ffffff;
+  gap: 1rem;
+  display: flex;
+  align-items:flex-start;
+  max-width: 600px;
+}
+
+.task_list_completed {
+  list-style-type: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.task_list_item_completed {
+  margin: 1rem 0.5rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background-color: #ffffff;
+  gap: 1rem;
+  display: flex;
+  align-items: flex-start;
+  max-width: 600px;
+}
+.completed_tasks {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem;
+}
+.completed_tasks a {
+  text-decoration: none;
+  color: #242629;
+}
+.completed_tasks a:hover,
+.task_list_container a:hover {
+  color: hsl(225, 64%, 63%);
+  transition : 0.2s ease;
+}
+
+@media (max-width: 500px) {
+  .form_task, .task_list_item, .task_list_item_completed {
+    max-width: 100%;
+  }
+
+  .button_row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+

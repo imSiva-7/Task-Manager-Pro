@@ -1,0 +1,164 @@
+/* Top Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: #e8e8e8;
+  position: relative;
+  color: rgb(7, 7, 7);
+  z-index: 100;
+}
+
+.header a {
+  text-decoration: none;
+  color: #343a40;
+}
+
+.header_logo h1 {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #343a40;
+  margin: 0;
+}
+
+/* Desktop Nav Menu */
+.header_nav {
+  display: none; /* Hidden for mobile, show via media query */
+}
+
+.header_menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.header_menu h2 {
+  font-size: 1.1rem;
+  color: #343a40;
+  transition: color 0.3s ease;
+}
+
+/* Menu container */
+.Menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Hamburger Button */
+.menu_button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 1rem;
+  z-index: 999;
+}
+
+.menu_button span {
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animate to X */
+.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.open span:nth-child(2) {
+  opacity: 0;
+}
+.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Slide-in Menu Panel */
+.menu_bar {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 70px;
+  width: 300px;
+  height: 100vh;
+  background: rgb(182, 181, 181);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  z-index: 500;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu_bar.active {
+  display: block;
+}
+
+.menu_ul {
+  list-style: none;
+  padding: 16px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu_ul li {
+  padding: 8px 0;
+}
+
+.menu_ul a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+}
+
+.menu_ul a:hover {
+  color: #555;
+}
+
+/* Show nav on desktop */
+@media (min-width: 768px) {
+  .header_nav {
+    display: block;
+  }
+
+  .Menu {
+    display: none;
+  }
+}
+.button_options{
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+height: 24px;
+width: 30px;
+margin-left: 1rem;
+background-color: none;
+border: none;
+z-index: 999;
+padding: 0;
+
+}
+.button_options span{
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: #2e2e2e;
+    transition: all 0.5s ease;
+}
+
+.close span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.close span:nth-child(2) {
+  opacity: 0;
+}
+.close span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}

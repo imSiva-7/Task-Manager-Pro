@@ -1,0 +1,3 @@
+Basic TO DO app, uses local storage.
+
+has CRUD operations, Come on guys, it is my first project! haha...
